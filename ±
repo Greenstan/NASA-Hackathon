@@ -1,0 +1,85 @@
+
+# Please enter the commit message for your changes. Lines starting
+# with '#' will be ignored, and an empty message aborts the commit.
+#
+# On branch main
+# Your branch is up to date with 'origin/main'.
+#
+# Changes to be committed:
+#	new file:   godot25dmap-master/.DS_Store
+#	new file:   godot25dmap-master/.env
+#	new file:   godot25dmap-master/.gitattributes
+#	new file:   godot25dmap-master/.gitignore
+#	new file:   godot25dmap-master/Air white.png
+#	new file:   godot25dmap-master/Air white.png.import
+#	new file:   godot25dmap-master/FishGame.gd
+#	new file:   godot25dmap-master/FishGame.tscn
+#	new file:   godot25dmap-master/Kuwait.gd
+#	new file:   godot25dmap-master/Kuwait.tscn
+#	new file:   godot25dmap-master/LICENSE
+#	new file:   godot25dmap-master/PathFollow2D.gd
+#	new file:   godot25dmap-master/README.md
+#	new file:   godot25dmap-master/ShitButton.gd
+#	new file:   godot25dmap-master/ShitButton.tscn
+#	new file:   godot25dmap-master/Solarsystemscope_texture_8k_earth_daymap.jpg
+#	new file:   godot25dmap-master/Solarsystemscope_texture_8k_earth_daymap.jpg.import
+#	new file:   godot25dmap-master/TrailFollow2D.gd
+#	new file:   godot25dmap-master/Tree.tscn
+#	new file:   godot25dmap-master/WindGust.gd
+#	new file:   godot25dmap-master/WindGust.tscn
+#	new file:   godot25dmap-master/addons/.DS_Store
+#	new file:   godot25dmap-master/addons/supabase/.DS_Store
+#	new file:   godot25dmap-master/addons/supabase/Auth/auth.gd
+#	new file:   godot25dmap-master/addons/supabase/Auth/auth_error.gd
+#	new file:   godot25dmap-master/addons/supabase/Auth/auth_task.gd
+#	new file:   godot25dmap-master/addons/supabase/Auth/user.gd
+#	new file:   godot25dmap-master/addons/supabase/Database/database.gd
+#	new file:   godot25dmap-master/addons/supabase/Database/database_error.gd
+#	new file:   godot25dmap-master/addons/supabase/Database/database_task.gd
+#	new file:   godot25dmap-master/addons/supabase/Database/query.gd
+#	new file:   godot25dmap-master/addons/supabase/Realtime/realtime.gd
+#	new file:   godot25dmap-master/addons/supabase/Realtime/realtime_channel.gd
+#	new file:   godot25dmap-master/addons/supabase/Realtime/realtime_client.gd
+#	new file:   godot25dmap-master/addons/supabase/Storage/storage.gd
+#	new file:   godot25dmap-master/addons/supabase/Storage/storage_bucket.gd
+#	new file:   godot25dmap-master/addons/supabase/Storage/storage_error.gd
+#	new file:   godot25dmap-master/addons/supabase/Storage/storage_task.gd
+#	new file:   godot25dmap-master/addons/supabase/Supabase/supabase.gd
+#	new file:   godot25dmap-master/addons/supabase/Wind.tscn
+#	new file:   godot25dmap-master/addons/supabase/icon.svg
+#	new file:   godot25dmap-master/addons/supabase/icon.svg.import
+#	new file:   godot25dmap-master/addons/supabase/plugin.cfg
+#	new file:   godot25dmap-master/addons/supabase/plugin.gd
+#	new file:   godot25dmap-master/air.png
+#	new file:   godot25dmap-master/air.png.import
+#	new file:   godot25dmap-master/backgroundmap.png
+#	new file:   godot25dmap-master/backgroundmap.png.import
+#	new file:   godot25dmap-master/camera.gd
+#	new file:   godot25dmap-master/co2.png
+#	new file:   godot25dmap-master/co2.png.import
+#	new file:   godot25dmap-master/dead-fish.png
+#	new file:   godot25dmap-master/dead-fish.png.import
+#	new file:   godot25dmap-master/default_env.tres
+#	new file:   godot25dmap-master/drought.png
+#	new file:   godot25dmap-master/drought.png.import
+#	new file:   godot25dmap-master/icon.png
+#	new file:   godot25dmap-master/icon.png.import
+#	new file:   godot25dmap-master/ireland.png
+#	new file:   godot25dmap-master/ireland.png.import
+#	new file:   godot25dmap-master/kuwait-silhouette-thumbnail.png
+#	new file:   godot25dmap-master/kuwait-silhouette-thumbnail.png.import
+#	new file:   godot25dmap-master/kuwait_road_map.gif
+#	new file:   godot25dmap-master/kuwait_road_map.jpg
+#	new file:   godot25dmap-master/kuwait_road_map.jpg.import
+#	new file:   godot25dmap-master/main.tscn
+#	new file:   godot25dmap-master/project.godot
+#	new file:   godot25dmap-master/shit.png
+#	new file:   godot25dmap-master/shit.png.import
+#	new file:   godot25dmap-master/solarsystemscopemap.jpg
+#	new file:   godot25dmap-master/solarsystemscopemap.jpg.import
+#	new file:   godot25dmap-master/tree.png
+#	new file:   godot25dmap-master/tree.png.import
+#	new file:   godot25dmap-master/white.png
+#	new file:   godot25dmap-master/white.png.import
+#Game
+

@@ -1,0 +1,99 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://white.png" type="Texture" id=1]
+[ext_resource path="res://FishGame.gd" type="Script" id=2]
+[ext_resource path="res://dead-fish.png" type="Texture" id=3]
+[ext_resource path="res://PathFollow2D.gd" type="Script" id=4]
+
+[sub_resource type="Curve2D" id=1]
+_data = {
+"points": PoolVector2Array( 0, 0, 0, 0, 5, 256, 0, 0, 0, 0, 580, 263, 0, 0, 0, 0, 1359, 280, 0, 0, 0, 0, 1984, 253 )
+}
+
+[node name="FishGame" type="Node2D"]
+script = ExtResource( 2 )
+
+[node name="Sprite" type="Sprite" parent="."]
+modulate = Color( 0.141176, 0.501961, 0.741176, 1 )
+position = Vector2( 1023.5, 514.5 )
+scale = Vector2( 8.196, 4.084 )
+texture = ExtResource( 1 )
+
+[node name="SpawnTimer" type="Timer" parent="."]
+wait_time = 1.3
+autostart = true
+
+[node name="Score Label" type="Label" parent="."]
+margin_left = 59.0
+margin_top = 116.0
+margin_right = 102.0
+margin_bottom = 130.0
+rect_scale = Vector2( 4, 3.143 )
+text = "Score: "
+
+[node name="Score Value" type="Label" parent="."]
+margin_left = 229.0
+margin_top = 121.0
+margin_right = 269.0
+margin_bottom = 135.0
+rect_scale = Vector2( 3, 3 )
+text = "0"
+
+[node name="Path2D" type="Path2D" parent="."]
+position = Vector2( 39, 6 )
+curve = SubResource( 1 )
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Path2D"]
+position = Vector2( 5, 256 )
+rotation = 0.0121679
+script = ExtResource( 4 )
+
+[node name="Sprite" type="Sprite" parent="Path2D/PathFollow2D"]
+position = Vector2( -0.999928, 0.0121765 )
+texture = ExtResource( 3 )
+flip_h = true
+
+[node name="Timer" type="Timer" parent="Path2D/PathFollow2D"]
+wait_time = 0.1
+autostart = true
+
+[node name="Path2D2" type="Path2D" parent="."]
+position = Vector2( 37, 295 )
+curve = SubResource( 1 )
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Path2D2"]
+position = Vector2( 5, 256 )
+rotation = 0.0121679
+script = ExtResource( 4 )
+
+[node name="Sprite" type="Sprite" parent="Path2D2/PathFollow2D"]
+position = Vector2( -0.999928, 0.0121765 )
+texture = ExtResource( 3 )
+flip_h = true
+
+[node name="Timer" type="Timer" parent="Path2D2/PathFollow2D"]
+wait_time = 0.1
+autostart = true
+
+[node name="Path2D3" type="Path2D" parent="."]
+position = Vector2( 36, 564 )
+curve = SubResource( 1 )
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Path2D3"]
+position = Vector2( 5, 256 )
+rotation = 0.0121679
+script = ExtResource( 4 )
+
+[node name="Sprite" type="Sprite" parent="Path2D3/PathFollow2D"]
+position = Vector2( -0.999928, 0.0121765 )
+texture = ExtResource( 3 )
+flip_h = true
+
+[node name="Timer" type="Timer" parent="Path2D3/PathFollow2D"]
+wait_time = 0.1
+autostart = true
+
+[connection signal="timeout" from="SpawnTimer" to="." method="_on_SpawnTimer_timeout"]
+[connection signal="timeout" from="Path2D/PathFollow2D/Timer" to="Path2D/PathFollow2D" method="_on_Timer_timeout"]
+[connection signal="timeout" from="Path2D2/PathFollow2D/Timer" to="Path2D2/PathFollow2D" method="_on_Timer_timeout"]
+[connection signal="timeout" from="Path2D3/PathFollow2D/Timer" to="Path2D3/PathFollow2D" method="_on_Timer_timeout"]
