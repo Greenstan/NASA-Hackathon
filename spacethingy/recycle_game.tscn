@@ -1,0 +1,73 @@
+[gd_scene load_steps=11 format=3 uid="uid://dk4l5ju70ekdo"]
+
+[ext_resource type="Script" path="res://recycle_game.gd" id="1_5jdpt"]
+[ext_resource type="Texture2D" uid="uid://1j3dno55561" path="res://white.png" id="1_320rt"]
+[ext_resource type="Texture2D" uid="uid://bjes3s82b3580" path="res://sand.png" id="2_c8ip4"]
+[ext_resource type="Texture2D" uid="uid://wxwpsiyo0sr5" path="res://Bin_Battery.png" id="3_l18un"]
+[ext_resource type="Texture2D" uid="uid://cgcmhjuqbv4vk" path="res://Bin_Bottle.png" id="4_051gq"]
+[ext_resource type="Texture2D" uid="uid://bp2r8tlw7lvu1" path="res://Bin_Leaf.png" id="5_umhbc"]
+[ext_resource type="PackedScene" uid="uid://bjmlmrrkvorfw" path="res://battery.tscn" id="6_nkklf"]
+[ext_resource type="PackedScene" uid="uid://cjq30uqpo3ky6" path="res://Water.tscn" id="7_yutvd"]
+[ext_resource type="PackedScene" uid="uid://bo8dc4331i24q" path="res://leaf.tscn" id="8_av4bn"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_u7rrf"]
+size = Vector2(351.667, 448.333)
+
+[node name="RecycleGame" type="Node2D"]
+script = ExtResource("1_5jdpt")
+
+[node name="Background" type="Sprite2D" parent="."]
+modulate = Color(0.12549, 0.431373, 0.882353, 1)
+position = Vector2(959.5, 540.5)
+scale = Vector2(7.668, 4.308)
+texture = ExtResource("1_320rt")
+
+[node name="Sand" type="Sprite2D" parent="."]
+position = Vector2(2747, 520)
+scale = Vector2(0.478907, 0.478907)
+texture = ExtResource("2_c8ip4")
+
+[node name="Battery" parent="." instance=ExtResource("6_nkklf")]
+
+[node name="Water2" parent="." instance=ExtResource("7_yutvd")]
+position = Vector2(1133, 854)
+
+[node name="Leaf" parent="." instance=ExtResource("8_av4bn")]
+position = Vector2(1500, 733)
+
+[node name="BinBattery" type="Sprite2D" parent="."]
+position = Vector2(323, 302)
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("3_l18un")
+
+[node name="Area2D" type="Area2D" parent="BinBattery"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BinBattery/Area2D"]
+position = Vector2(-0.833313, 0.833344)
+shape = SubResource("RectangleShape2D_u7rrf")
+
+[node name="BinBottle" type="Sprite2D" parent="."]
+position = Vector2(1541, 302)
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("4_051gq")
+
+[node name="Area2D" type="Area2D" parent="BinBottle"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BinBottle/Area2D"]
+position = Vector2(-0.833313, 0.833344)
+shape = SubResource("RectangleShape2D_u7rrf")
+
+[node name="BinLeaf" type="Sprite2D" parent="."]
+position = Vector2(899, 302)
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("5_umhbc")
+
+[node name="Area2D" type="Area2D" parent="BinLeaf"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BinLeaf/Area2D"]
+position = Vector2(-0.833313, 0.833344)
+shape = SubResource("RectangleShape2D_u7rrf")
+
+[connection signal="battery_done" from="Battery" to="." method="_on_battery_battery_done"]
+[connection signal="water_done" from="Water2" to="." method="_on_water_2_water_done"]
+[connection signal="leaf_done" from="Leaf" to="." method="_on_leaf_leaf_done"]

@@ -1,0 +1,7 @@
+[gd_scene load_steps=3 format=3 uid="uid://bsn7p06c72ln5"]
+
+[ext_resource type="PackedScene" uid="uid://cerbywc778mhr" path="res://tree.tscn" id="1_gbtb1"]
+[ext_resource type="Texture2D" uid="uid://vatnp2hi11gn" path="res://wind-power.png" id="2_wu1xq"]
+
+[node name="Tree" instance=ExtResource("1_gbtb1")]
+texture = ExtResource("2_wu1xq")

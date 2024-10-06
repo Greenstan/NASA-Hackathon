@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://d025jlvcfotb4"]
+
+[ext_resource type="Texture2D" uid="uid://cebuftiob64u7" path="res://plastic-bag.png" id="1_le4wn"]
+[ext_resource type="Script" path="res://plastic_bag.gd" id="2_msgf7"]
+
+[node name="PlasticBag" type="TextureButton"]
+offset_left = 361.0
+offset_top = 308.0
+offset_right = 873.0
+offset_bottom = 820.0
+scale = Vector2(0.35, 0.35)
+texture_normal = ExtResource("1_le4wn")
+texture_pressed = ExtResource("1_le4wn")
+texture_hover = ExtResource("1_le4wn")
+texture_disabled = ExtResource("1_le4wn")
+texture_focused = ExtResource("1_le4wn")
+script = ExtResource("2_msgf7")

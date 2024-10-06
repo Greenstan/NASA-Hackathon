@@ -1,0 +1,7 @@
+[gd_scene load_steps=3 format=3 uid="uid://t2b3yg7gc8l8"]
+
+[ext_resource type="PackedScene" uid="uid://cerbywc778mhr" path="res://tree.tscn" id="1_jlhon"]
+[ext_resource type="Texture2D" uid="uid://10i22le6thpf" path="res://solar-energy-2.png" id="2_65bl4"]
+
+[node name="Tree" instance=ExtResource("1_jlhon")]
+texture = ExtResource("2_65bl4")

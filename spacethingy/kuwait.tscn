@@ -1,0 +1,161 @@
+[gd_scene load_steps=11 format=3 uid="uid://dc5djdvl677px"]
+
+[ext_resource type="Script" path="res://kuwait.gd" id="1_40anl"]
+[ext_resource type="Texture2D" uid="uid://c3xf5utoc3rf4" path="res://kuw.001.png" id="1_ugycp"]
+[ext_resource type="Texture2D" uid="uid://chifypwn8ndco" path="res://tree.png" id="2_2j6p0"]
+[ext_resource type="Texture2D" uid="uid://1j3dno55561" path="res://white.png" id="2_usfx7"]
+[ext_resource type="Texture2D" uid="uid://10i22le6thpf" path="res://solar-energy-2.png" id="4_ejo2r"]
+[ext_resource type="Texture2D" uid="uid://vatnp2hi11gn" path="res://wind-power.png" id="5_jlop3"]
+[ext_resource type="PackedScene" uid="uid://esn57pwl0sb" path="res://fish_game.tscn" id="6_7grps"]
+[ext_resource type="Texture2D" uid="uid://0djafwmey2va" path="res://warning.png" id="8_kq7tu"]
+[ext_resource type="Texture2D" uid="uid://bfag15d12sn5v" path="res://co2.png" id="9_6oryd"]
+[ext_resource type="PackedScene" uid="uid://dk4l5ju70ekdo" path="res://recycle_game.tscn" id="10_x0c52"]
+
+[node name="Kuwait" type="Node2D"]
+script = ExtResource("1_40anl")
+
+[node name="White" type="Sprite2D" parent="."]
+modulate = Color(0.239216, 0.709804, 1, 1)
+position = Vector2(955, 540)
+scale = Vector2(7.648, 4.312)
+texture = ExtResource("2_usfx7")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(1010, 543)
+scale = Vector2(1.03697, 1.03697)
+texture = ExtResource("1_ugycp")
+
+[node name="TreeButton" type="TextureButton" parent="."]
+offset_left = 92.0
+offset_top = 970.0
+offset_right = 604.0
+offset_bottom = 1482.0
+scale = Vector2(0.2, 0.2)
+texture_normal = ExtResource("2_2j6p0")
+texture_pressed = ExtResource("2_2j6p0")
+texture_hover = ExtResource("2_2j6p0")
+texture_disabled = ExtResource("2_2j6p0")
+texture_focused = ExtResource("2_2j6p0")
+
+[node name="SolarButton" type="TextureButton" parent="."]
+offset_left = 202.0
+offset_top = 970.0
+offset_right = 714.0
+offset_bottom = 1482.0
+scale = Vector2(0.2, 0.2)
+texture_normal = ExtResource("4_ejo2r")
+texture_pressed = ExtResource("4_ejo2r")
+texture_hover = ExtResource("4_ejo2r")
+texture_disabled = ExtResource("4_ejo2r")
+texture_focused = ExtResource("4_ejo2r")
+
+[node name="WindButton" type="TextureButton" parent="."]
+offset_left = 309.0
+offset_top = 970.0
+offset_right = 821.0
+offset_bottom = 1482.0
+scale = Vector2(0.2, 0.2)
+texture_normal = ExtResource("5_jlop3")
+texture_pressed = ExtResource("5_jlop3")
+texture_hover = ExtResource("5_jlop3")
+texture_disabled = ExtResource("5_jlop3")
+texture_focused = ExtResource("5_jlop3")
+
+[node name="FishGame" parent="." instance=ExtResource("6_7grps")]
+visible = false
+
+[node name="Warning1" type="TextureButton" parent="."]
+offset_left = 1119.0
+offset_top = 491.0
+offset_right = 1631.0
+offset_bottom = 1003.0
+scale = Vector2(0.3, 0.3)
+texture_normal = ExtResource("8_kq7tu")
+texture_pressed = ExtResource("8_kq7tu")
+texture_hover = ExtResource("8_kq7tu")
+texture_disabled = ExtResource("8_kq7tu")
+texture_focused = ExtResource("8_kq7tu")
+
+[node name="Warning2" type="TextureButton" parent="."]
+visible = false
+offset_left = 1232.0
+offset_top = 343.0
+offset_right = 1744.0
+offset_bottom = 855.0
+scale = Vector2(0.3, 0.3)
+texture_normal = ExtResource("8_kq7tu")
+texture_pressed = ExtResource("8_kq7tu")
+texture_hover = ExtResource("8_kq7tu")
+texture_disabled = ExtResource("8_kq7tu")
+texture_focused = ExtResource("8_kq7tu")
+
+[node name="AQ" type="Panel" parent="."]
+visible = false
+offset_left = 89.0
+offset_top = 343.0
+offset_right = 404.0
+offset_bottom = 472.0
+
+[node name="Label" type="Label" parent="AQ"]
+layout_mode = 0
+offset_top = 1.0
+offset_right = 315.0
+offset_bottom = 129.0
+text = "Air Quality is at critical levels!!
+
+Use the toolbar to improve Air Quality"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Carbons" type="Node2D" parent="."]
+visible = false
+position = Vector2(0.00012207, 6.10352e-05)
+scale = Vector2(1, 1)
+
+[node name="Co2" type="Sprite2D" parent="Carbons" groups=["Carbon"]]
+position = Vector2(1163, 544)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("9_6oryd")
+
+[node name="Co3" type="Sprite2D" parent="Carbons" groups=["Carbon"]]
+position = Vector2(1263, 554)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("9_6oryd")
+
+[node name="Co4" type="Sprite2D" parent="Carbons" groups=["Carbon"]]
+position = Vector2(1147, 624)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("9_6oryd")
+
+[node name="Co5" type="Sprite2D" parent="Carbons" groups=["Carbon"]]
+position = Vector2(1278, 624)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("9_6oryd")
+
+[node name="Co6" type="Sprite2D" parent="Carbons" groups=["Carbon"]]
+position = Vector2(1210, 597)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("9_6oryd")
+
+[node name="Co7" type="Sprite2D" parent="Carbons" groups=["Carbon"]]
+position = Vector2(1168, 688)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("9_6oryd")
+
+[node name="Co8" type="Sprite2D" parent="Carbons" groups=["Carbon"]]
+position = Vector2(1247, 685)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("9_6oryd")
+
+[node name="FishGameTimer" type="Timer" parent="."]
+wait_time = 20.0
+
+[node name="RecycleGame" parent="." instance=ExtResource("10_x0c52")]
+
+[connection signal="pressed" from="TreeButton" to="." method="_on_tree_button_pressed"]
+[connection signal="pressed" from="SolarButton" to="." method="_on_solar_button_pressed"]
+[connection signal="pressed" from="WindButton" to="." method="_on_wind_button_pressed"]
+[connection signal="pressed" from="Warning1" to="." method="_on_warning_1_pressed"]
+[connection signal="pressed" from="Warning2" to="." method="_on_warning_2_pressed"]
+[connection signal="timeout" from="FishGameTimer" to="." method="_on_fish_game_timer_timeout"]
+[connection signal="finished_all" from="RecycleGame" to="." method="_on_recycle_game_finished_all"]

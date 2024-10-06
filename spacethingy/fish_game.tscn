@@ -1,0 +1,179 @@
+[gd_scene load_steps=6 format=3 uid="uid://esn57pwl0sb"]
+
+[ext_resource type="Texture2D" uid="uid://1j3dno55561" path="res://white.png" id="1_cb5xs"]
+[ext_resource type="Script" path="res://fish_game.gd" id="1_rdq4j"]
+[ext_resource type="Script" path="res://path_follow_2d.gd" id="2_4iupj"]
+[ext_resource type="Texture2D" uid="uid://bksspp47nl1bm" path="res://fish.png" id="3_ofbvk"]
+
+[sub_resource type="Curve2D" id="Curve2D_vqjmj"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 2, 235, 0, 0, 0, 0, 682, 252, 0, 0, 0, 0, 1380, 256, 0, 0, 0, 0, 1920, 254)
+}
+point_count = 4
+
+[node name="FishGame" type="Node2D"]
+script = ExtResource("1_rdq4j")
+
+[node name="Background" type="Sprite2D" parent="."]
+modulate = Color(0.126776, 0.430444, 0.883531, 1)
+position = Vector2(960, 541)
+scale = Vector2(7.68, 4.312)
+texture = ExtResource("1_cb5xs")
+metadata/_edit_lock_ = true
+
+[node name="Fishies" type="Node2D" parent="."]
+
+[node name="Sprite2D2" type="Sprite2D" parent="Fishies"]
+position = Vector2(273, 232)
+rotation = 0.0249948
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("3_ofbvk")
+
+[node name="Sprite2D3" type="Sprite2D" parent="Fishies"]
+position = Vector2(256, 477)
+rotation = 0.0249948
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("3_ofbvk")
+
+[node name="Sprite2D4" type="Sprite2D" parent="Fishies"]
+position = Vector2(530, 739)
+rotation = 0.0249948
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("3_ofbvk")
+
+[node name="Sprite2D5" type="Sprite2D" parent="Fishies"]
+position = Vector2(232, 739)
+rotation = 0.0249948
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("3_ofbvk")
+
+[node name="Sprite2D6" type="Sprite2D" parent="Fishies"]
+position = Vector2(637, 572)
+rotation = 0.0249948
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("3_ofbvk")
+
+[node name="Sprite2D7" type="Sprite2D" parent="Fishies"]
+position = Vector2(538, 274)
+rotation = 0.0249948
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("3_ofbvk")
+
+[node name="Sprite2D8" type="Sprite2D" parent="Fishies"]
+position = Vector2(907, 164)
+rotation = 0.0249948
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("3_ofbvk")
+
+[node name="Sprite2D9" type="Sprite2D" parent="Fishies"]
+position = Vector2(1055, 362)
+rotation = 0.0249948
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("3_ofbvk")
+
+[node name="Sprite2D10" type="Sprite2D" parent="Fishies"]
+position = Vector2(954, 601)
+rotation = 0.0249948
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("3_ofbvk")
+
+[node name="Sprite2D11" type="Sprite2D" parent="Fishies"]
+position = Vector2(874, 905)
+rotation = 0.0249948
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("3_ofbvk")
+
+[node name="Sprite2D12" type="Sprite2D" parent="Fishies"]
+position = Vector2(368, 922)
+rotation = 0.0249948
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("3_ofbvk")
+
+[node name="Sprite2D13" type="Sprite2D" parent="Fishies"]
+position = Vector2(1252, 911)
+rotation = 0.0249948
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("3_ofbvk")
+
+[node name="Sprite2D14" type="Sprite2D" parent="Fishies"]
+position = Vector2(1315, 679)
+rotation = 0.0249948
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("3_ofbvk")
+
+[node name="Sprite2D15" type="Sprite2D" parent="Fishies"]
+position = Vector2(1359, 419)
+rotation = 0.0249948
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("3_ofbvk")
+
+[node name="Sprite2D16" type="Sprite2D" parent="Fishies"]
+position = Vector2(1374, 164)
+rotation = 0.0249948
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("3_ofbvk")
+
+[node name="Sprite2D17" type="Sprite2D" parent="Fishies"]
+position = Vector2(1689, 175)
+rotation = 0.0249948
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("3_ofbvk")
+
+[node name="Sprite2D18" type="Sprite2D" parent="Fishies"]
+position = Vector2(1679, 498)
+rotation = 0.0249948
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("3_ofbvk")
+
+[node name="Sprite2D19" type="Sprite2D" parent="Fishies"]
+position = Vector2(1679, 718)
+rotation = 0.0249948
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("3_ofbvk")
+
+[node name="Sprite2D20" type="Sprite2D" parent="Fishies"]
+position = Vector2(1713, 932)
+rotation = 0.0249948
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("3_ofbvk")
+
+[node name="Path2D" type="Path2D" parent="."]
+visible = false
+curve = SubResource("Curve2D_vqjmj")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Path2D"]
+position = Vector2(95.7674, 237.344)
+rotation = 0.0249948
+progress = 93.8
+script = ExtResource("2_4iupj")
+
+[node name="Sprite2D" type="Sprite2D" parent="Path2D/PathFollow2D"]
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("3_ofbvk")
+
+[node name="Timer" type="Timer" parent="Path2D/PathFollow2D"]
+wait_time = 0.1
+autostart = true
+
+[node name="SpawnTimer" type="Timer" parent="."]
+wait_time = 1.5
+
+[node name="Score Text" type="Label" parent="."]
+offset_left = 39.0
+offset_top = 41.0
+offset_right = 124.0
+offset_bottom = 86.0
+theme_override_font_sizes/font_size = 32
+text = "Score: "
+
+[node name="ScoreValue" type="Label" parent="."]
+offset_left = 138.0
+offset_top = 43.0
+offset_right = 240.0
+offset_bottom = 88.0
+theme_override_font_sizes/font_size = 32
+text = "0
+"
+
+[connection signal="timeout" from="Path2D/PathFollow2D/Timer" to="Path2D/PathFollow2D" method="_on_timer_timeout"]
+[connection signal="timeout" from="SpawnTimer" to="." method="_on_spawn_timer_timeout"]

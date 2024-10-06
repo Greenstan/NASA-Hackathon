@@ -1,0 +1,13 @@
+[gd_scene load_steps=4 format=3 uid="uid://bo8dc4331i24q"]
+
+[ext_resource type="PackedScene" uid="uid://bjmlmrrkvorfw" path="res://battery.tscn" id="1_l4ee8"]
+[ext_resource type="Texture2D" uid="uid://dp0ig4qsn2yjn" path="res://food.png" id="2_p7xim"]
+[ext_resource type="Script" path="res://leaf.gd" id="2_r86k4"]
+
+[node name="Leaf" instance=ExtResource("1_l4ee8")]
+position = Vector2(813, 788)
+texture = ExtResource("2_p7xim")
+script = ExtResource("2_r86k4")
+
+[node name="CollisionShape2D" parent="Area2D" index="0"]
+position = Vector2(-0.000284831, 3.33333)
